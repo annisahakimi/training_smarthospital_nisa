@@ -144,13 +144,13 @@ st.markdown("""
     </div>
     """, unsafe_allow_html=True)
 
-    col_cc, col_dur = st.columns(2)
-    with col_cc:
-        chief_complaint = st.selectbox("Chief complaint", options=list(cc_map.keys()))
-    with col_dur:
-        duration = st.selectbox("Duration", options=list(dur_map.keys()), index=1)
+  col_cc, col_dur = st.columns(2)
+  with col_cc:
+      chief_complaint = st.selectbox("Chief complaint", options=list(cc_map.keys()))
+  with col_dur:
+      duration = st.selectbox("Duration", options=list(dur_map.keys()), index=1)
 
-    st.markdown("<br>", unsafe_allow_html=True)
+  st.markdown("<br>", unsafe_allow_html=True)
 
 
 
