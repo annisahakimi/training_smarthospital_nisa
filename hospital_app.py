@@ -15,10 +15,14 @@ st.markdown("""
 
     #Main Menu {visibility: hidden;}
     header[data-testid="stHeader"]{display:none;}
+    .stDeployButton {display:none;}
+    footer { visibility: hidden;}
+    .block-container {padding-top: 0 !important; padding-bottom: 2rem !important; max-width:1100px !important;}
+    div[data-testid="stForm"] {border:none; padding:0}
     
     
   </style>
-""")
+""", unsafe_allow_html=True)
 
 
                    
