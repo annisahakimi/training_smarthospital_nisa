@@ -112,7 +112,7 @@ with st.form("triage_form"):
     </div>
     """, unsafe_allow_html=True)
 
-  c1, c2, c3, c4 = st.columns(4)
+  c1, c2, c3, c4 = st.columns(4) #can try to divide to 3 column
   with c1:
       fever            = st.checkbox("🌡️  Fever")
       cough            = st.checkbox("🤧  Cough")
@@ -172,6 +172,44 @@ with st.form("triage_form"):
 
   st.markdown("<br>", unsafe_allow_html=True)
 
+  #section 4 - medical history
+  st.markdown("""
+    <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:14px;
+                padding:20px 24px;margin-bottom:20px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
+            <span style="background:#059669;color:white;border-radius:8px;
+                         padding:4px 10px;font-size:12px;font-weight:600;">4</span>
+            <span style="font-size:16px;font-weight:600;color:#064e3b;">Do you have any of the following?</span>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+  ch1, ch2, ch3, _ = st.columns(4)
+  with ch1: hypertension  = st.checkbox("🩺 High Blood Pressure")
+  with ch2: heart_disease = st.checkbox("❤️ Heart Disease")
+  with ch3: asthma        = st.checkbox("💨 Asthma")
+
+  st.markdown("<br>", unsafe_allow_html=True)
+
+  #section 5 - Patient Info
+  st.markdown("""
+    <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;
+                padding:20px 24px;margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:10px;">
+            <span style="background:#475569;color:white;border-radius:8px;
+                         padding:4px 10px;font-size:12px;font-weight:600;">5</span>
+            <span style="font-size:16px;font-weight:600;color:#1e293b;">Patient Information</span>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+  col_age, col_gen = st.columns(2)
+  with col_age:
+      age    = st.number_input("Age", min_value=1, max_value=120, value=35)
+  with col_gen:
+      gender = st.selectbox("Gender", options=['Female', 'Male'])
+
+  submitted = st.form_submit_button("Get AI Recommendation →")
 
 
 
