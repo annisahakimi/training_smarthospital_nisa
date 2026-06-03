@@ -252,6 +252,8 @@ with st.form("triage_form"):
     <div style="font-size:22px;font-weight:700;color:#111827;margin-bottom:4px;">AI Recommendation</div>
     <div style="font-size:14px;color:#6b7280;margin-bottom:1.5rem;">Based on the information you provided</div>
     """, unsafe_allow_html=True)
+
+    res_col, prob_col = st.columns([3, 2])
   
     with res_col: #column result
           steps_html = ''.join(
