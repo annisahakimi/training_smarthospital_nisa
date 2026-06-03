@@ -152,6 +152,26 @@ with st.form("triage_form"):
 
   st.markdown("<br>", unsafe_allow_html=True)
 
+ # Section 3 — Severity
+  st.markdown("""
+  <div style="background:#fff7ed;border:1px solid #fed7aa;border-radius:14px;
+              padding:20px 24px;margin-bottom:20px;">
+      <div style="display:flex;align-items:center;gap:10px;">
+          <span style="background:#ea580c;color:white;border-radius:8px;
+                       padding:4px 10px;font-size:12px;font-weight:600;">3</span>
+          <span style="font-size:16px;font-weight:600;color:#7c2d12;">How would you rate the severity?</span>
+      </div>
+  </div>
+  """, unsafe_allow_html=True)
+
+  col_temp, col_hr = st.columns(2)
+  with col_temp:
+      temperature_level = st.selectbox("Temperature", options=list(temp_map.keys()), index=1)
+  with col_hr:
+      heart_rate_level  = st.selectbox("Heart rate", options=list(hr_map.keys()), index=1)
+
+  st.markdown("<br>", unsafe_allow_html=True)
+
 
 
 
