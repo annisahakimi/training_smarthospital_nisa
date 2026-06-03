@@ -18,13 +18,15 @@ st.markdown("""
     .stDeployButton {display:none;}
     footer { visibility: hidden;}
     .block-container {padding-top: 0 !important; padding-bottom: 2rem !important; max-width:1100px !important;}
-    div[data-testid="stForm"] {border:none; padding:0}
-    
-    
+    div[data-testid="stCheckbox"] label {
+    font-size: 14px !important; font-weight: 500 !important; color: #374151 !important;
+    }
+  }
+  
   </style>
 """, unsafe_allow_html=True)
 
-st.title("Hello")
+st.title("")
 
 
                    
