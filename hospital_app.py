@@ -126,11 +126,32 @@ with st.form("triage_form"):
       nausea_vomiting  = st.checkbox("🤮  Nausea / Vomiting")
       dizziness        = st.checkbox("😵  Dizziness")
 
-  c5, _, _, _ = st.columns(4)
+  c5, _, _, _ = st.columns(4) # _ = empty column
   with c5:
       skin_rash = st.checkbox("🔴  Skin Rash")
 
   st.markdown("<br>", unsafe_allow_html=True)
+
+##Section 2 - Duration & Complaint
+st.markdown("""
+    <div style="background:#fdf4ff;border:1px solid #e9d5ff;border-radius:14px;
+                padding:20px 24px;margin-bottom:20px;">
+        <div style="display:flex;align-items:center;gap:10px;">
+            <span style="background:#7c3aed;color:white;border-radius:8px;
+                         padding:4px 10px;font-size:12px;font-weight:600;">2</span>
+            <span style="font-size:16px;font-weight:600;color:#3b0764;">How long have you had these symptoms?</span>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    col_cc, col_dur = st.columns(2)
+    with col_cc:
+        chief_complaint = st.selectbox("Chief complaint", options=list(cc_map.keys()))
+    with col_dur:
+        duration = st.selectbox("Duration", options=list(dur_map.keys()), index=1)
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
 
 
 
