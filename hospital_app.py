@@ -112,25 +112,25 @@ with st.form("triage_form"):
     </div>
     """, unsafe_allow_html=True)
 
-    c1, c2, c3, c4 = st.columns(4)
-    with c1:
-        fever            = st.checkbox("🌡️  Fever")
-        cough            = st.checkbox("🤧  Cough")
-    with c2:
-        headache         = st.checkbox("🤕  Headache")
-        chest_pain       = st.checkbox("💔  Chest Pain")
-    with c3:
-        stomach_pain     = st.checkbox("🤢  Stomach Pain")
-        shortness_breath = st.checkbox("😮‍💨  Shortness of Breath")
-    with c4:
-        nausea_vomiting  = st.checkbox("🤮  Nausea / Vomiting")
-        dizziness        = st.checkbox("😵  Dizziness")
+  c1, c2, c3, c4 = st.columns(4)
+  with c1:
+      fever            = st.checkbox("🌡️  Fever")
+      cough            = st.checkbox("🤧  Cough")
+  with c2:
+      headache         = st.checkbox("🤕  Headache")
+      chest_pain       = st.checkbox("💔  Chest Pain")
+  with c3:
+      stomach_pain     = st.checkbox("🤢  Stomach Pain")
+      shortness_breath = st.checkbox("😮‍💨  Shortness of Breath")
+  with c4:
+      nausea_vomiting  = st.checkbox("🤮  Nausea / Vomiting")
+      dizziness        = st.checkbox("😵  Dizziness")
 
-    c5, _, _, _ = st.columns(4)
-    with c5:
-        skin_rash = st.checkbox("🔴  Skin Rash")
+  c5, _, _, _ = st.columns(4)
+  with c5:
+      skin_rash = st.checkbox("🔴  Skin Rash")
 
-    st.markdown("<br>", unsafe_allow_html=True)
+  st.markdown("<br>", unsafe_allow_html=True)
 
 
 
